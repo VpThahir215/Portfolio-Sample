@@ -27,35 +27,6 @@ body{
 }
 
 /* =========================
-   IMAGE
-========================= */
-
-.image img {
-  width: 187px;
-  height: 193px;
-  border-radius: 16%;
-  border: 2px solid black;
-  transition: transform 0.4s ease;
-  object-fit: cover;
-  margin-left: -181px;
-  margin-top: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-
-.image img:hover{
-    transform: scale(1.1);
-}
-
-/* =========================
    DATE
 ========================= */
 
@@ -74,7 +45,7 @@ body{
 .name-image{
     margin-top: 35px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     width: 564px;
     height: 220px;
     background-color: rgb(255, 255, 255);
@@ -98,22 +69,13 @@ body{
 }
 
 /* =========================
-   IMAGE BOX
+   BOX
 ========================= */
 
-.image{
-    background-color: rgb(255, 255, 255);
-    width: 414px;
-    height: 200px;
-    margin-left: 2px;
-    padding: 4px;
-    padding-left: 10px;
-    transition: 0.5s;
-    margin-top: -2px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.box{
+    border: 1px solid rgb(11, 11, 10);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 /* =========================
@@ -121,7 +83,7 @@ body{
 ========================= */
 
 .const{
-    width: 414px;
+    width: 100%;
     height: 142px;
     color: beige;
     background-color: black;
@@ -130,6 +92,42 @@ body{
 
 .const p{
     margin: 0;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.image{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    margin-left: 2px;
+    padding: 4px;
+    padding-left: 10px;
+    transition: 0.5s;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.image img{
+    width: 130px;
+    height: 160px;
+    border-radius:16%;
+    border: 2px solid black;
+    transition: transform 0.4s ease;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.image img:hover{
+    transform: scale(1.1);
+}
+
+.image img:active{
+    transform: scale(1.1);
 }
 
 /* =========================
@@ -160,17 +158,6 @@ body{
 
 .social a{
     color: black;
-}
-
-/* =========================
-   BOX
-========================= */
-
-.box {
-  border: 1px solid rgb(11, 11, 10);
-  border-radius: 10px;
-  overflow: hidden;
-  width: 320px;
 }
 
 /* =========================
@@ -356,136 +343,88 @@ input[type=button]:hover{
 /* =========================
    MOBILE RESPONSIVE
 ========================= */
-@media (max-width: 412px){
+
+@media (max-width:768px){
 
     body{
         overflow-x: hidden;
     }
 
-    /* =========================
-       DATE
-    ========================= */
-
     #date{
         width: 100%;
         padding-left: 0;
         text-align: center;
-        font-size: 13px;
-        margin-top: 10px;
+        font-size: 14px;
     }
 
-    /* =========================
-       NAME IMAGE SECTION
-    ========================= */
-
     .name-image{
-        width: 95%;
+        width: 90%;
         height: auto;
         margin: 20px auto;
         grid-template-columns: 1fr;
-        padding: 15px;
-        gap: 15px;
+        padding: 20px;
     }
- .image{
+
+    .image{
         width: 100%;
         height: auto;
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display:flex;
+        justify-content:center;
+        align-items:center;
     }
 
-     .image img{
+    .image img{
+        width: 160px;
+        height: 190px;
         display: block;
         margin: auto;
     }
 
-
     .const{
         width: 100%;
         height: auto;
-        font-size: 13px;
-        padding: 10px;
+        font-size: 14px;
     }
-
-    /* =========================
-       SOCIAL
-    ========================= */
 
     .social{
-        width: 160px;
-        margin: 15px auto;
-        font-size: 24px;
-        height: 40px;
+        margin: 20px auto;
     }
 
-    /* =========================
-       NAVBAR
-    ========================= */
-
     .bar{
-        width: 95%;
+        width: 90%;
         margin: 20px auto;
-        gap: 8px;
+        gap: 10px;
         flex-wrap: wrap;
         height: auto;
-        padding: 10px;
     }
 
     .bar a{
-        font-size: 13px;
-        padding: 5px;
+        font-size: 14px;
     }
-
-    /* =========================
-       ALL MAIN SECTIONS
-    ========================= */
 
     .about,
     #skill,
     #project,
     #contact{
-        width: 95%;
+        width: 90%;
         margin: 20px auto;
         height: auto;
-        padding: 20px;
+        padding: 25px;
     }
-
-    /* =========================
-       SKILLS
-    ========================= */
 
     #skill i{
-        font-size: 38px;
-        padding: 5px;
+        font-size: 42px;
     }
-
-    /* =========================
-       PROJECT
-    ========================= */
 
     .coming-soon{
         height: auto;
-        padding: 40px 15px;
+        padding: 50px 20px;
     }
-
-    /* =========================
-       FORM
-    ========================= */
 
     #email{
         width: 100%;
     }
-
-    input[type=text],
-    input[type=email],
-    textarea{
-        font-size: 14px;
-    }
-    .box{
-      margin-left: 18px;
-    }
-
 }
