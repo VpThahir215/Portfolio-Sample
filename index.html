@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ez9doMSEM0UMb1e8a",
+      });
+   })();
+</script>
 </head>
 
 <body>
@@ -29,7 +39,7 @@
                         <p><span><span style="color: rgb(106, 106, 106);">04</span> skills:</span> <span
                                 style="color: rosybrown;"> ['HTML','CSS'];</span> </p>
                         <p><span><span style="color: rgb(106, 106, 106);">05</span> passsionate:</span> <span
-                                style="color:red"> tru,</span> </p>
+                                style="color:red"> true,</span> </p>
                         <p><span><span style="color: rgb(106, 106, 106);">06</span> </span> <span></span> = };</p>
                     </div>
                 </div>
@@ -64,7 +74,7 @@
             <a href="#date">About</a>
             <a href="#skill">Skill</a>
             <a href="#project">Project</a>
-            <a href="#mail">Contact</a>
+            <a href="#contact">Contact</a>
         </div>
         <div id="discription">
             <div class="about">
@@ -99,32 +109,27 @@
                <div class="coming-soon"> <h1>Coming Soon...</h1></div>
             </div>
             <div id="contact">
-                <div class="address">
-                    <h4>Address</h4>
-                    <p>
-                        <i class="fa-solid fa-location-dot"></i>
-                    <address> Kodinhi, Malappuram,Kerala</address>
-                    </p>
+              <div class="container">
+ <form id="contact-form">
+    <label for="name">First Name</label>
+    <input type="text" id="name" placeholder="Your name..">
 
-                </div>
-                <div class="number">
-                    <a href="tel:+919946659082">
-                        <i class="fa-solid fa-phone"></i> +91 9946659082
-                    </a>
-                </div>
-                <div id="mail">
-                    <p>
-                        <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:vpthahir3062003@gmail.com">vpthahir3062003@gmail.com</a>
-                    </p>
-                </div>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Your email..">
+
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="button" value="Submit" onclick="sendMail()">
+</form>
+</div>
             </div>
 
         </div>
 
 
     </div>
-
+<script src="scrtipt.js"></script>
 </body>
 
 </html>

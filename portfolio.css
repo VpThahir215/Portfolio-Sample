@@ -1,89 +1,141 @@
 html{
     scroll-behavior: smooth;
 }
+
 body{
-    overflow: hidden;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
+
+/* =========================
+   GLOBAL
+========================= */
 
 *{
     box-sizing: border-box;
 }
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
 .container{
     display: grid;
     background-color: rgb(255, 255, 255);
     justify-content: center;
 }
-.image img{
-      width: 130px;
-      height: 160px;
-  border-radius:16%;
-  border: 2px solid black;
 
+/* =========================
+   IMAGE
+========================= */
+
+.image img {
+  width: 187px;
+  height: 193px;
+  border-radius: 16%;
+  border: 2px solid black;
   transition: transform 0.4s ease;
+  object-fit: cover;
+  margin-left: -181px;
+  margin-top: 20px;
 }
-.image img:hover {
-  transform: scale(1.1);
+
+
+
+
+
+
+
+
+
+
+
+.image img:hover{
+    transform: scale(1.1);
 }
+
+/* =========================
+   DATE
+========================= */
+
 #date{
     display: grid;
-    justify-content: center;background-color: rgb(255, 255, 255);
+    justify-content: center;
     width: 564px;
     padding-left: 100px;
     margin-top: 3px;
-
-
 }
+
+/* =========================
+   NAME IMAGE SECTION
+========================= */
+
 .name-image{
-  margin-top: 35px;
-  display: grid;
-  grid-template-columns: auto auto;
-  width: 564px;
-  height: 220px;
-  background-color: rgb(255, 255, 255);
-  margin-left: 55px;
-  box-shadow: 5px 5px 10px gray;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 20px;
-  overflow: hidden;
-
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 564px;
+    height: 220px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 55px;
+    box-shadow: 5px 5px 10px gray;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    overflow: hidden;
 }
+
+/* =========================
+   PORTFOLIO
+========================= */
+
 .portfolio{
     display: flex;
-  background-color: rgb(74, 40, 40);
+    background-color: rgb(74, 40, 40);
     justify-content: flex-end;
     color: beige;
     padding-right: 30px;
-    
 }
+
+/* =========================
+   IMAGE BOX
+========================= */
 
 .image{
     background-color: rgb(255, 255, 255);
-     width: 414px;
+    width: 414px;
     height: 200px;
     margin-left: 2px;
-  padding: 4px;
-  background-color: rgb(255, 255, 255);
-  padding-left: 10px;
-  transition: 0.5s;
-  margin-top: -2px;
+    padding: 4px;
+    padding-left: 10px;
+    transition: 0.5s;
+    margin-top: -2px;
 
-
-
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
-.image img:hover{
-    transform: scale(20px);
-}
+
+/* =========================
+   CONST
+========================= */
+
 .const{
     width: 414px;
     height: 142px;
     color: beige;
     background-color: black;
-   
-    
+    padding: 10px;
 }
+
 .const p{
     margin: 0;
 }
+
+/* =========================
+   SOCIAL
+========================= */
+
 .social{
     background-color: rgb(255, 255, 255);
     border:1px solid rgb(4, 3, 3);
@@ -91,133 +143,346 @@ body{
     border-radius: 13px;
     height: 33px;
     font-size: 28px;
-    width: 166px;;
+    width: 166px;
     margin-top: 11px;
     padding-left: 14px;
     margin-left: 15px;
-      transition: transform 0.4s ease;
+    transition: transform 0.4s ease;
 
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
 }
+
 .social:hover{
-     transform: scale(1.1);
+    transform: scale(1.1);
 }
 
-.box{
-      border: 1px solid rgb(11, 11, 10);
-    border-radius: 10px;
-      overflow: hidden;
-      
+.social a{
+    color: black;
 }
+
+/* =========================
+   BOX
+========================= */
+
+.box {
+  border: 1px solid rgb(11, 11, 10);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 320px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
 .bar{
     background-color: rgb(244, 244, 141);
     width: 564px;
     height: 40px;
     border: 1px solid black;
-  border-radius: 15px;
-  padding: 10px 15px;
-  display: flex;
-  gap: 30px;
-  justify-content: space-around;
-  margin-top: 20px;
-  margin-left: 58px;
-   box-shadow: 5px 5px 10px gray;
-   position: sticky;
-   top: 0;
-   z-index: 100;
-   
-   
+    border-radius: 15px;
+    padding: 10px 15px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-left: 58px;
+    box-shadow: 5px 5px 10px gray;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-  
+
 .bar a{
     color: black;
-  text-decoration: none;
-  flex: 1;
-  text-align: center;
-  padding: 10px0;
-  
-  
-
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
 }
+
 .bar a:hover{
     background-color: oklch(0.8603 0.176 92.36);
-border: 2px solid black;
-border-radius: 6px;
- 
-
-
+    border: 2px solid black;
+    border-radius: 6px;
 }
+
+/* =========================
+   ABOUT
+========================= */
+
 .about{
     background-color: rgb(255, 255, 255);
-  width: 564px;
-  height: 500px;
-  border: 1px solid black;
-  border-radius: 25px;
-  padding: 48px;
-  margin-left: 58px;
-  margin-top: 22px;
-   box-shadow: 5px 5px 10px gray;
+    width: 564px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 48px;
+    margin-left: 58px;
+    margin-top: 22px;
+    box-shadow: 5px 5px 10px gray;
 }
+
+/* =========================
+   SKILL
+========================= */
+
 #skill{
-       background-color: rgb(255, 255, 255);
-  width: 564px;
-  height: 500px;
-  border: 1px solid black;
-  border-radius: 25px;
-  padding: 48px;
-  margin-left: 58px;
-  margin-top: 22px;
-   box-shadow: 5px 5px 10px gray;
-     scroll-margin-top: 64px; 
+    background-color: rgb(255, 255, 255);
+    width: 564px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 48px;
+    margin-left: 58px;
+    margin-top: 22px;
+    box-shadow: 5px 5px 10px gray;
+    scroll-margin-top: 64px;
 }
+
 #skill a{
     text-decoration: underline;
     text-decoration-color: oklch(0.8603 0.176 92.36);
-    text-underline-offset: 5px;
     text-underline-offset: 13px;
-  text-decoration-thickness: 4px;
-color: black;
-
+    text-decoration-thickness: 4px;
+    color: black;
 }
+
 #skill i{
     font-size: 56px;
     padding: 9px;
 }
-#project{
-        background-color: rgb(255, 255, 255);
-  width: 564px;
-  height: 500px;
-  border: 1px solid black;
-  border-radius: 25px;
-  padding: 48px;
-  margin-left: 58px;
-  margin-top: 22px;
-   box-shadow: 5px 5px 10px gray;
-     scroll-margin-top: 64px; 
-     transition: transform 0.4s ease;
 
+/* =========================
+   PROJECT
+========================= */
+
+#project{
+    background-color: rgb(255, 255, 255);
+    width: 564px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 48px;
+    margin-left: 58px;
+    margin-top: 22px;
+    box-shadow: 5px 5px 10px gray;
+    scroll-margin-top: 64px;
+    transition: transform 0.4s ease;
 }
+
 #project:hover{
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
+
 .coming-soon{
     background-color: rgb(255, 255, 255);
-  height: 200px;
-  text-align: center;
-  padding-top: 56px;
-  border: 1px solid black;
-  border-radius: 12px;
+    height: 200px;
+    text-align: center;
+    padding-top: 56px;
+    border: 1px solid black;
+    border-radius: 12px;
 }
+
+/* =========================
+   CONTACT
+========================= */
+
 #contact{
     display: grid;
-     grid-template-rows: auto auto auto ;
-         background-color: rgb(255, 255, 255);
-  width: 564px;
-  height: 500px;
-  border: 1px solid black;
-  border-radius: 25px;
-  padding: 48px;
-  margin-left: 58px;
-  margin-top: 22px;
-   box-shadow: 5px 5px 10px gray;
-     margin-bottom: 397px;
+    grid-template-rows: auto auto auto;
+    background-color: rgb(255, 255, 255);
+    width: 564px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 48px;
+    margin-left: 58px;
+    margin-top: 22px;
+    box-shadow: 5px 5px 10px gray;
+    margin-bottom: 397px;
+    padding-top: 41px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit],
+input[type=button]{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover,
+input[type=button]:hover{
+    background-color: #45a049;
+}
+
+/* =========================
+   CONTACT CONTAINER
+========================= */
+
+.contact-container{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+#email{
+    width: 372px;
+    height: 40px;
+    margin-bottom: 13px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 412px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       DATE
+    ========================= */
+
+    #date{
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    /* =========================
+       NAME IMAGE SECTION
+    ========================= */
+
+    .name-image{
+        width: 95%;
+        height: auto;
+        margin: 20px auto;
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 15px;
+    }
+ .image{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+     .image img{
+        display: block;
+        margin: auto;
+    }
+
+
+    .const{
+        width: 100%;
+        height: auto;
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    /* =========================
+       SOCIAL
+    ========================= */
+
+    .social{
+        width: 160px;
+        margin: 15px auto;
+        font-size: 24px;
+        height: 40px;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .bar{
+        width: 95%;
+        margin: 20px auto;
+        gap: 8px;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+
+    .bar a{
+        font-size: 13px;
+        padding: 5px;
+    }
+
+    /* =========================
+       ALL MAIN SECTIONS
+    ========================= */
+
+    .about,
+    #skill,
+    #project,
+    #contact{
+        width: 95%;
+        margin: 20px auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    #skill i{
+        font-size: 38px;
+        padding: 5px;
+    }
+
+    /* =========================
+       PROJECT
+    ========================= */
+
+    .coming-soon{
+        height: auto;
+        padding: 40px 15px;
+    }
+
+    /* =========================
+       FORM
+    ========================= */
+
+    #email{
+        width: 100%;
+    }
+
+    input[type=text],
+    input[type=email],
+    textarea{
+        font-size: 14px;
+    }
+
 }
